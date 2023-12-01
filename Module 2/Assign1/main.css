@@ -1,0 +1,30 @@
+h1 {
+    font-family: sans-serif;
+    color: #5c4ae4f8;
+}
+
+.different-code {
+    color: #816c6c;
+}
+
+code {
+    font-family: monospace;
+    color: red;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+li + li {
+    background: black;
+    color: white;
+}
+
+ol > li {
+    color: white; 
+    background: black;
+}
+
+
+

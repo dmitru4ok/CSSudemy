@@ -1,0 +1,25 @@
+* {
+    box-sizing: content-box;
+}
+
+.styled-div {
+    display: inline-block;
+    background-color: aqua;
+    border: 3px dotted green;
+    padding: 5px 0 10px 5px;
+    margin: 15px 0 10px 5px;
+}
+
+.one{
+    height: 300px;
+    width: 50%;
+    /* visibility: hidden; */
+}
+
+.one:hover {
+    display: none;
+}
+
+.two:hover {
+    visibility: hidden;
+}

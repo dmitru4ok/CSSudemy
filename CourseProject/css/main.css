@@ -1,0 +1,171 @@
+#product-overview {
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.5) 10%, transparent), url("../img/freedom.jpg") left 30% top 30%/cover no-repeat border-box, #ff1b68;
+    /* background-size: cover;
+    
+    background-position: left 10% bottom 20% ;  */
+    /* background-repeat: no-repeat; */
+    /* border: 5px dashed red; */
+    /* background-origin: border-box;
+    background-attachment: fixed; */
+    /* background-image: radial-gradient(closest-corner at 20% 50%, red, blue, green); */
+    width: 100vw;
+    height: 33vh; 
+    position: relative;
+    z-index: -1;
+}
+
+#product-overview h1 {
+    color:white;
+    font-family: 'Anton', sans-serif; 
+    position: absolute;
+    bottom: 15%;
+    left: 3%;
+    font-size: 1.6rem;
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Plans-section */
+
+.plan {
+    background-color: #d5ffdc;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: #858585;
+}
+
+
+.plan__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan__feature {
+    margin: 0.5rem 0;
+}
+
+.plan--highlighted {
+    background-color: #19b84c;
+    color: white;
+}
+
+.plan__annotation {
+    background-color: white;
+    color: #0b4a1f;
+    border-radius: 10px;
+    padding: 0.5rem;
+    box-shadow:  0 0 4px 1px rgba(0, 0, 0, 0.7);
+}
+
+.plan--highlighted > .plan__title {
+    color: white;
+}
+
+.plan--highlighted > .plan__price {
+    color: #0b4a1f;
+}
+
+/* Key-features section */
+
+#key-features {
+    background-color: #ff1b68;
+    margin-top: 5rem; 
+    padding: 1rem;
+}
+
+#key-features > .section-title {
+    color: white;
+    margin: 2rem; 
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+.key-feature__image {
+    width: 128px;
+    height: 128px;
+    padding: 1.25rem;
+    border: 2px solid #424242;
+    background-color: #ffcede;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* image + headline */
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #product-overview {
+        height: 40vh;
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1 {
+        font-size: 3rem;
+    }
+}
+
+/* plans + features when bigger than 40 rem query*/
+@media (min-width: 40rem) {
+    .plan__list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .plan {
+        width: 30%;
+        min-width: 13rem;
+        max-width: 25rem;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    
+
+    .plan--highlighted {
+        box-shadow:  0 0 8px 1px rgba(222, 35, 35, 0.7);
+        z-index: 1;
+        height: 95%
+    }
+
+    .key-feature__list {
+       display: flex;
+       justify-content: center;
+    }
+
+    .key-feature {
+       
+        width: 30%;
+        max-width: 25rem;
+    }
+}
+ 
+

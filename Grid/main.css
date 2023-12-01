@@ -1,0 +1,52 @@
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: [hd1-start] repeat(4, 1fr) [hd1-end];
+    grid-template-rows: [hd1-start] 5rem [hd1-end] 8rem 5rem;
+    height: 500px;
+
+    /* row, column or as margin/padding */
+    /* grid-gap: 10px 0.5rem;  */
+    grid-template-areas: "elem3 elem3 elem3 elem3"
+                         ". side main main"
+                         "foot foot foot foot";
+}
+
+@media (max-width: 40rem) {
+    .container {
+        grid-template-areas: "elem3 elem3 elem3 elem3"
+                         "main main main main"
+                         "side side side side"
+                         "foot foot foot foot";
+                         grid-template-rows: [hd1-start] 5rem [hd1-end] 8rem 5rem 3rem;
+    }
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+    grid-area: side;
+    
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    grid-area: main;
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+    /* grid-column-start: 2;
+    grid-column-end: -1; */
+    /* grid-column: 2 / -2;
+    grid-row-start: 1;
+    grid-row-end: span 2; */
+
+    /* row-start / col-start / row-end / col-end */
+    /* grid-area: 1 / 2 / span 2 / -1; */
+    grid-area: hd1;
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+    grid-area: foot;
+}
