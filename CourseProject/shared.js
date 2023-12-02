@@ -7,19 +7,20 @@ let mobileNav = document.querySelector(".mobile-nav");
 
 const closeModal = () => {
     backdrop.classList.remove('display');
+    
     setTimeout(()=>{
         backdrop.style.display = 'none';
     }, 200);
-
     if (modal !== null) {
         modal.classList.remove('display');
     }
 };
 
 const openModal = () => {
-    modal.classList.add('display');
+    modal.style.display  = 'block';
     backdrop.style.display = 'block';
     setTimeout(() => {
+        modal.classList.add('display');
         backdrop.classList.add('display');
     }, 1);
     

@@ -162,6 +162,7 @@ body {
 
 /* Modal */
 .modal {
+    display: none;
     position: fixed;
     z-index: 200;
     top: 20%;
