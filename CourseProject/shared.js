@@ -6,15 +6,23 @@ let togleBtn = document.querySelector(".toggle-button");
 let mobileNav = document.querySelector(".mobile-nav");
 
 const closeModal = () => {
-    backdrop.classList.remove('display-block');
+    backdrop.classList.remove('display');
+    setTimeout(()=>{
+        backdrop.style.display = 'none';
+    }, 200);
+
     if (modal !== null) {
-        modal.classList.remove('display-block');
+        modal.classList.remove('display');
     }
 };
 
 const openModal = () => {
-    backdrop.classList.add('display-block');
-    modal.classList.add('display-block');
+    modal.classList.add('display');
+    backdrop.style.display = 'block';
+    setTimeout(() => {
+        backdrop.classList.add('display');
+    }, 1);
+    
 };
 
 allChoosenButtons.forEach((btn) => {
@@ -27,13 +35,18 @@ if (discardPlanChoosingBtn !== null) {
 
 
 backdrop.addEventListener('click', () => {
-    mobileNav.classList.remove('display-block');
+    mobileNav.classList.remove('display');
     closeModal();
 });
 
 togleBtn.addEventListener('click', () => {
-    mobileNav.classList.add('display-block');
-    backdrop.classList.add('display-block');
+    mobileNav.style.display = 'block';
+    backdrop.style.display = 'block';
+    setTimeout(() => {
+        backdrop.classList.add('display');
+        mobileNav.classList.add('display');
+    }, 1);
+    
 });
 
 

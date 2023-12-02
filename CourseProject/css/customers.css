@@ -20,7 +20,7 @@ main {
     width: 100%;
     /* to fix whitespace bug, no need actually */
     display: block;
-    transform: skewX(-10deg)  scale(1.2);
+    transform: skewX(-10deg) scale(1.2);
     
   }
   
