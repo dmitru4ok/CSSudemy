@@ -107,6 +107,32 @@ body {
     border-bottom: 5px solid white;
 }
 
+.main-nav__item:last-child {
+    /* name duration delay iterations*/
+    /* animation: shake 400ms 8 alternate-reverse forwards; */
+    animation-name: shake;
+    animation-duration: 400ms;
+    animation-iteration-count: infinite; 
+    animation-fill-mode: forwards;
+    animation-direction:alternate;
+    /* animation-timing-function: linear;  default*/
+}
+
+/* Keyframse for CTA button */
+@keyframes shake {
+    0% {
+        transform: rotateZ(-10deg);  
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
 .main-nav__item:last-child > a,
 .mobile-nav__item:last-child > a {
     color: white;
@@ -294,3 +320,5 @@ body {
         margin: 0 1rem;
     }
 }
+
+
