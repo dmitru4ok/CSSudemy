@@ -120,10 +120,10 @@ body {
     /* name duration delay iterations*/
     /* animation: shake 400ms 8 alternate-reverse forwards; */
     animation-name: shake;
-    animation-duration: 400ms;
+    animation-duration: 4000ms;
     animation-iteration-count: infinite; 
     animation-fill-mode: forwards;
-    animation-direction:alternate;
+    animation-direction: alternate;
     /* animation-timing-function: linear;  default*/
 }
 

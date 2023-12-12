@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --slider-width: 40px;
+            --slider-height: 20px;
+            --curvature-radius: 25px;
+            --circle-dim: 15px;
+            --edge-distance: calc((var(--slider-height) - (var(--circle-dim))) / 2 );
+            --anim-time: 400ms;
+        }
+        .switch {
+            height: 100px;
+            background: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: var(--slider-width);
+            height: var(--slider-height);
+            display: inline-block;
+            position: relative;
+        }
+
+        input[type="checkbox"] {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+
+        .slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(192, 192, 192);
+            border-radius: var(--curvature-radius);
+            cursor: pointer;
+            transition: background-color var(--anim-time);
+        }
+
+        .slider::before {
+            content: "";
+            width: var(--circle-dim);
+            height: var(--circle-dim);
+            border-radius: 50%;
+            top: var(--edge-distance);
+            left: var(--edge-distance);
+            background-color: white;
+            position: absolute;
+            transition: transform var(--anim-time), background-color var(--anim-time);
+        }
+
+        input[type="checkbox"]:checked + .slider {
+            background-color: #055e0a;
+        }
+
+        input[type="checkbox"]:checked + .slider::before {
+            transform: translateX(calc(var(--slider-width) - 2 * var(--edge-distance) - var(--circle-dim)));
+           
+            background-color: yellow;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="switch">
+        <label class="container" for="chck"> 
+            <input type="checkbox" id="chck">
+            <div class="slider"></div>
+        </label>
+    </div>   
+</body>
+<script>
+    const checkbox = document.querySelector('input[type]');
+    checkbox.addEventListener('input', ()=> {
+        console.log(checkbox.checked ? 'checked' : 'unchecked');
+    });
+</script> 
+</html>
